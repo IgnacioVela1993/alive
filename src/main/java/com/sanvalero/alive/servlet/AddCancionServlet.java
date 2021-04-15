@@ -1,7 +1,7 @@
 package com.sanvalero.alive.servlet;
 
-import com.sanvalero.alive.dao.MovieDAO;
-import com.sanvalero.alive.domain.Movie;
+import com.sanvalero.alive.dao.CancionDAO;
+import com.sanvalero.alive.domain.Cancion;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -14,21 +14,23 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet que añade una película a la base de datos
  */
-@WebServlet(name = "add-movie", urlPatterns = {"/add-movie"})
+// add-cancion
+@WebServlet(name = "add-cancion", urlPatterns = {"/add-cancion"})
 public class AddCancionServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
-        String title = request.getParameter("title");
-        String director = request.getParameter("director");
-        int duration = Integer.parseInt(request.getParameter("duration"));
-        String category = request.getParameter("category");
-        boolean viewed = request.getParameter("viewed").equals("on");
+        String nombre = request.getParameter("nombre");
+        String duracion = request.getParameter("duracion");
+        String id = request.getParameter("id");
+        String favorita = request.getParameter("favorita");
         
-        Movie movie = new Movie(title, director, duration, category, viewed);
-        MovieDAO movieDAO = new MovieDAO();
+        Cancion cancion = new Cancion(nombre, duracion, id, favorita);
+        
+        
+        CancionDAO cancionDAO = new CancionDAO();
         try {
-            movieDAO.addMovie(movie);
+            cancionDAO.addCancion(cancion);
             
             PrintWriter out = response.getWriter();
             response.sendRedirect("myform.jsp?status=ok");

@@ -11,23 +11,27 @@ package com.sanvalero.alive.domain;
  */
 public class Cancion {
     
-    private int idcancion; 
+    private String idcancion; 
     private String nombre; 
-    private int duracion; 
-    private boolean favorita; 
+    private String duracion; 
+    private String favorita; 
 
-    public cancion(int idcancion, String nombre, int duracion, boolean favorita) {
+    public Cancion(String idcancion, String nombre, String duracion, String favorita) {
         this.idcancion = idcancion;
         this.nombre = nombre;
         this.duracion = duracion;
         this.favorita = favorita;
     }
 
-    public int getIdcancion() {
+    public Cancion() {
+       
+    }
+
+    public String getIdcancion() {
         return idcancion;
     }
 
-    public void setIdcancion(int idcancion) {
+    public void setIdcancion(String idcancion) {
         this.idcancion = idcancion;
     }
 
@@ -39,25 +43,22 @@ public class Cancion {
         this.nombre = nombre;
     }
 
-    public int getDuracion() {
+    public String getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(String duracion) {
         this.duracion = duracion;
     }
 
-    public boolean isFavorita() {
+    public String getFavorita() {
         return favorita;
     }
 
-    public void setFavorita(boolean favorita) {
+    public void setFavorita(String favorita) {
         this.favorita = favorita;
     }
-    
-    public boolean añadirFavorito(favorita){
-        return true; 
-    }
+
     
 }
 

@@ -1,6 +1,7 @@
+<%@page import="com.sanvalero.alive.domain.Cancion"%>
+<%@page import="com.sanvalero.alive.dao.CancionDAO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.sanvalero.netflix.domain.Movie"%>
-<%@page import="com.sanvalero.netflix.dao.MovieDAO"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,20 +12,20 @@
     <body>
         <h1>Lista de peliculas (con JSP)</h1>
         <%
-            MovieDAO movieDAO = new MovieDAO();
-            ArrayList<Movie> movies = movieDAO.getAllMovies();
+            CancionDAO cancionDAO = new CancionDAO();
+            ArrayList<Cancion> canciones = cancionDAO.getAllCanciones();
         %>
         <ul>
         <%
-            for (Movie movie : movies) {
+            for (Cancion cancion : canciones) {
         %>
-        <li><%= movie.getTitle() %> <a href="remove-movie?id=<%= movie.getId() %>">Eliminar</a></li>
+        <li><%= cancion.getNombre() %> <a href="remove-cancion?id=<%= cancion.getIdcancion() %>">Eliminar</a></li>
         <%    
             }
         %>
         </ul>
         <!-- FIXME pelicula de ejemplo (eliminar cuando se desarrolle el listado) -->
-        <li>Título de ejemplo <a href="remove-movie?id=45">Eliminar</a></li>
+        <li>Título de ejemplo <a href="remove-cancion?id=45">Eliminar</a></li>
         <%
             // Muestra el mensaje (si lo hay)
             String message = request.getParameter("message");

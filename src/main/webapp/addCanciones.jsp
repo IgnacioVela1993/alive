@@ -7,18 +7,16 @@
     </head>
     <body>
         <h1>Ejemplo de formulario web</h1>
-        <form method="post" action="add-movie">
-            Título:
-            <input type="text" name="title"/><br/>
-            Director:
-            <input type="text" name="director"/><br/>
+        <form method="post" action="add-cancion">
+            Nombre Canción:
+            <input type="text" name="nombre"/><br/>
             Duración:
-            <input type="text" name="duration"/><br/>
-            Categoría:
-            <input type="text" name="category"/><br/>
-            Vista:
-            <input type="checkbox" name="viewed"/><br/>
-            <input type="submit" value="Registrar"/>
+            <input type="text" name="duracion"/><br/>
+            ID Canción: 
+            <input type="text" name="id"/><br/>
+            ¿Es tu favorita? 
+            <input type="text" name="favorita"/><br/>
+            <input type="submit" value="Añadir"/>
         </form>
         
         <%

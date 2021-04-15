@@ -9,15 +9,15 @@ package com.sanvalero.alive.domain;
  *
  * @author nachovelagomez
  */
-public class usuario {
-    private int idusuario; 
+public class Usuario {
+    private String idusuario; 
     private String nombre; 
     private String apellido; 
     private String nick; 
-    private boolean cuentaPremium; 
+    private String cuentaPremium; 
     private String localidad; 
 
-    public usuario(int idusuario, String nombre, String apellido, String nick, boolean cuentaPremium, String localidad) {
+    public Usuario(String idusuario, String nombre, String apellido, String nick, String cuentaPremium, String localidad) {
         this.idusuario = idusuario;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -26,11 +26,11 @@ public class usuario {
         this.localidad = localidad;
     }
 
-    public int getIdusuario() {
+    public String getIdusuario() {
         return idusuario;
     }
 
-    public void setIdusuario(int idusuario) {
+    public void setIdusuario(String idusuario) {
         this.idusuario = idusuario;
     }
 
@@ -58,11 +58,11 @@ public class usuario {
         this.nick = nick;
     }
 
-    public boolean isCuentaPremium() {
+    public String getCuentaPremium() {
         return cuentaPremium;
     }
 
-    public void setCuentaPremium(boolean cuentaPremium) {
+    public void setCuentaPremium(String cuentaPremium) {
         this.cuentaPremium = cuentaPremium;
     }
 
@@ -73,12 +73,8 @@ public class usuario {
     public void setLocalidad(String localidad) {
         this.localidad = localidad;
     }
+
     
-    public boolean convertirPremium(cuentaPremium){
-        if (this.cuentaPremium > 0){
-            return true; 
-        }
-        return false; 
     }
 
   
@@ -86,4 +82,4 @@ public class usuario {
     
    
     
-}
+

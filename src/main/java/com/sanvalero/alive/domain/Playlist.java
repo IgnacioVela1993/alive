@@ -43,12 +43,6 @@ public class Playlist {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    
-    public void cambiarNombre(){
-        this.nombre_playlist = nuevoNombre; 
-    }
-    
-    public boolean guardarPlaylist(){
-        return true; 
-    }
+
+  
 }
