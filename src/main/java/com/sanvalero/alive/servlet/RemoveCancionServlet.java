@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet que elimina una película a la base de datos
  */
 @WebServlet(name = "remove-movie", urlPatterns = {"/remove-movie"})
-public class RemoveMovieServlet extends HttpServlet {
+public class RemoveCancionServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {

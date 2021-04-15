@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet que añade una película a la base de datos
  */
 @WebServlet(name = "add-movie", urlPatterns = {"/add-movie"})
-public class AddMovieServlet extends HttpServlet {
+public class AddCancionServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
